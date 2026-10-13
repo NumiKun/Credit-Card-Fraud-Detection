@@ -1,0 +1,51 @@
+{
+  "model_name": "LightGBM Fraud Detector",
+  "version": "1.0.0",
+  "trained_at": "2026-10-13 14:12:36",
+  "dataset": "credit_card_fraud_detection_2026.csv",
+  "n_training_samples": 156712,
+  "n_test_samples": 20000,
+  "n_features": 41,
+  "target": "is_fraud",
+  "class_labels": {
+    "0": "Legitimate",
+    "1": "Fraud"
+  },
+  "imbalance_handling": "SMOTE + scale_pos_weight",
+  "optimal_threshold": 0.54,
+  "hyperparameters": {
+    "objective": "binary",
+    "metric": [
+      "binary_logloss",
+      "auc"
+    ],
+    "boosting_type": "gbdt",
+    "num_leaves": 63,
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "n_estimators": 600,
+    "min_child_samples": 30,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.1,
+    "reg_lambda": 0.1,
+    "scale_pos_weight": 1.0,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbose": -1
+  },
+  "performance_metrics": {
+    "model": "LightGBM",
+    "ROC-AUC": 0.7912,
+    "PR-AUC": 0.0762,
+    "Precision": 0.0754,
+    "Recall": 0.4453,
+    "F1-Score": 0.129,
+    "threshold": 0.35
+  },
+  "artifacts": {
+    "model_file": "model_artifacts/lgb_fraud_detector.pkl",
+    "scaler_file": "model_artifacts/feature_scaler.pkl",
+    "feature_names_file": "model_artifacts/feature_names.json"
+  }
+}
