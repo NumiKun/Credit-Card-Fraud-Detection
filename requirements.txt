@@ -1,0 +1,32 @@
+# ============================================================
+# Credit Card Fraud Detection — Requirements
+# ============================================================
+# Python >= 3.10 recommended
+# Install all dependencies with:
+#   pip install -r requirements.txt
+
+# ── Core Data Science ──────────────────────────────────────
+numpy==2.5.1
+pandas==3.0.5
+
+# ── Visualization ─────────────────────────────────────────
+matplotlib==3.11.1
+seaborn==0.13.2
+
+# ── Machine Learning ──────────────────────────────────────
+scikit-learn==1.9.0
+imbalanced-learn==0.14.2
+lightgbm==4.7.0
+xgboost==3.3.0
+catboost==1.2.10
+
+# ── Model Explainability ──────────────────────────────────
+shap==0.52.0
+
+# ── Model Persistence ─────────────────────────────────────
+joblib==1.5.3
+
+# ── Notebook Environment ──────────────────────────────────
+ipykernel==7.3.0
+notebook==7.6.3
+jupyterlab==4.6.4
